@@ -4,6 +4,7 @@ import com.example.demo.mapper.NewsMapper;
 import com.example.demo.mapper.TypeMapper;
 import com.example.demo.model.News;
 import com.example.demo.model.Type;
+import com.example.demo.model.User;
 import com.example.demo.service.AllInOneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,4 +42,37 @@ public class AllInOneServiceImpl implements AllInOneService {
     public News queryNewsDetail(String newsId) {
         return newsMapper.selectByPrimaryKey(newsId);
     }
+
+    /**
+     * 用户模块start
+     */
+    /**
+     * 根据电话和密码查找用户
+     * @param telephone
+     * @param password
+     * @return
+     */
+    @Override
+    public User queryUserByTelAndPwd(String telephone, String password) {
+        return null;
+    }
+
+    /**
+     * 根据电话查找用户
+     * @param telephone
+     * @return
+     */
+    @Override
+    public User queryUserByTel(String telephone) {
+        return null;
+    }
+
+    @Override
+    public User queryUserByTelAndCode(String telephone, String code) {
+        return null;
+    }
+
+    /**
+     * 用户模块end
+     */
 }
